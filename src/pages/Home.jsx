@@ -1,4 +1,5 @@
 import HorizonHeader from '../components/HorizonHeader.jsx'
+import BrandMark from '../components/BrandMark.jsx'
 import OnTop from '../components/OnTop.jsx'
 import Footer from '../components/Footer.jsx'
 import Hero from '../sections/Hero.jsx'
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <>
       <HorizonHeader />
+      <BrandMark />
       <main>
         <Hero />
         <Sponsor />

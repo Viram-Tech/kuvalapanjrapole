@@ -1,6 +1,6 @@
 import { motion } from 'motion/react'
 import { useLang } from '../i18n.jsx'
-import { STATS, ANIMALS, ORG } from '../data/site.js'
+import { STATS, ANIMALS } from '../data/site.js'
 
 // Horizon-style opening: a small centered window opens (clip-path reveal) onto
 // the video. The video keeps its original size/framing the whole time — the
@@ -29,45 +29,6 @@ export default function Hero() {
             <source src="/hero.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/20 to-ink/35" />
-
-          {/* Poster — the name sits at the TOP and the mark is centered; the
-              whole poster scales up out of the rectangle, so the name grows and
-              settles at the top (Horizon-style). The video never scales. */}
-          <motion.div
-            className="pointer-events-none absolute inset-0"
-            initial={{ scale: 0.24, opacity: 0 }}
-            /* Same timeline as the clip reveal: stay small (and fade in) while
-               the rectangle forms, then grow from small→full in lockstep with
-               the video's expansion. */
-            animate={{ scale: [0.24, 0.24, 1], opacity: [0, 1, 1] }}
-            transition={{ duration: 3, ease: [0.76, 0, 0.24, 1], times: [0, 0.27, 1], delay: 0.3 }}
-            style={{ transformOrigin: 'center center' }}
-          >
-            {/* name, pinned near the top */}
-            <div className="absolute inset-x-0 top-[9vh] flex flex-col items-center px-6 text-center text-paper">
-              <p className="eyebrow mb-4 text-[11px] text-paper/70">{t('hero.eyebrow')}</p>
-              <h1 className="font-display text-[clamp(2.2rem,8vw,7rem)] font-semibold leading-[0.95] tracking-tight">
-                {ORG.brand}
-              </h1>
-              <p lang="gu" className="font-guj mt-3 text-lg text-paper/85">{ORG.nameGu}</p>
-            </div>
-
-            {/* horizon mark, centered */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <motion.svg
-                width="72"
-                height="72"
-                viewBox="0 0 72 72"
-                className="text-paper/80"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: [0, 1, 1, 0] }}
-                transition={{ duration: 2.05, times: [0, 0.15, 0.6, 1], delay: 1.1 }}
-              >
-                <circle cx="36" cy="36" r="25" fill="none" stroke="currentColor" strokeWidth="1" />
-                <line x1="17" y1="36" x2="55" y2="36" stroke="currentColor" strokeWidth="1" />
-              </motion.svg>
-            </div>
-          </motion.div>
         </motion.div>
 
         {/* scroll hint */}
@@ -81,9 +42,9 @@ export default function Hero() {
         </motion.div>
       </section>
 
-      {/* Aggregate stats band — first content of the "normal site" */}
-      <section className="px-4 pt-16 sm:px-6">
-        <div className="mx-auto max-w-7xl">
+      {/* Aggregate stats band — full-height first screen of the "normal site" */}
+      <section className="flex min-h-screen items-center px-4 py-24 sm:px-6">
+        <div className="mx-auto w-full max-w-7xl">
           <p className="max-w-3xl text-2xl leading-snug text-ink sm:text-3xl">{t('hero.body')}</p>
           <dl className="mt-12 grid grid-cols-2 divide-line border-y border-line md:grid-cols-4 md:divide-x">
             {STATS.map((s) => (

@@ -37,7 +37,7 @@ export default function HorizonHeader() {
 
   useEffect(() => {
     const onScroll = () => {
-      const past = window.scrollY > window.innerHeight * 0.85
+      const past = window.scrollY > window.innerHeight * 0.5
       setShow(past)
       if (!past) setOpen(false)
     }
@@ -66,15 +66,9 @@ export default function HorizonHeader() {
             {open ? 'Close' : 'Menu'}
           </button>
 
-          {/* Wordmark (center) */}
-          <a href="#top" className="justify-self-center text-center leading-none">
-            <span className="block font-display text-[15px] font-semibold uppercase tracking-[0.14em] text-ink sm:text-lg">
-              Khodadhor Panjrapole
-            </span>
-            <span className="mt-1 block text-[9px] uppercase tracking-[0.34em] text-ink-2 sm:text-[10px]">
-              Kuvala · Banaskantha
-            </span>
-          </a>
+          {/* Center left empty — the shared BrandMark shrinks into this space */}
+          <span aria-hidden />
+
 
           {/* Language (right) */}
           <div className="justify-self-end">
