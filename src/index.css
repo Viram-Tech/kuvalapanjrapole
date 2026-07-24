@@ -1,0 +1,97 @@
+@import 'tailwindcss';
+
+/* -------------------------------------------------------------------------
+   Shri Khodadhor Panjrapole — theme
+   Editorial minimalism (Horizon-style) on a warm sanctuary palette.
+------------------------------------------------------------------------- */
+@theme {
+  /* Horizon-style neutral monochrome — near-white paper, near-black ink,
+     neutral grays. Photos carry all the colour; the UI stays achromatic. */
+  --color-paper: #f4f3f0; /* near-white page */
+  --color-paper-2: #e9e7e2; /* faint neutral surface */
+  --color-ink: #171614; /* near-black text */
+  --color-ink-2: #85837c; /* neutral gray (secondary) */
+  --color-line: #dbdad4; /* hairline dividers */
+
+  /* Former accents, now neutral so every existing usage reads monochrome. */
+  --color-maroon: #171614; /* primary actions → ink */
+  --color-maroon-dark: #000000; /* hover */
+  --color-saffron: #171614;
+  --color-olive: #57564f; /* "Funded" badge → dark gray */
+
+  --font-display: 'Archivo', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-guj: 'Noto Sans Gujarati', sans-serif;
+  --font-dev: 'Noto Sans Devanagari', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Oversized editorial display type */
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* Small monospaced-feeling index/eyebrow labels */
+.eyebrow {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+/* Language-specific type so Gujarati/Hindi render well */
+:lang(gu) {
+  font-family: var(--font-guj);
+}
+:lang(hi) {
+  font-family: var(--font-dev);
+}
+
+/* ---- Looping hero montage (ambient "loop video" feel) ------------------- */
+/* 4 slides, 24s cycle, ~6s each with soft crossfades + slow Ken Burns zoom. */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: heroFade 24s infinite;
+}
+.hero-slide img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: blur(1.5px); /* softens the low-res source into ambient background */
+  transform: scale(1.08);
+  animation: heroZoom 24s infinite;
+  animation-delay: inherit; /* keep zoom in sync with each slide's fade */
+}
+@keyframes heroFade {
+  0% { opacity: 0; }
+  2% { opacity: 1; }
+  23% { opacity: 1; }
+  27% { opacity: 0; }
+  100% { opacity: 0; }
+}
+@keyframes heroZoom {
+  0% { transform: scale(1.08); }
+  27% { transform: scale(1.2); }
+  100% { transform: scale(1.2); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide { animation: none; }
+  .hero-slide:first-child { opacity: 1; }
+  .hero-slide img { animation: none; transform: scale(1.05); }
+}
