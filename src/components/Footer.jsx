@@ -1,8 +1,8 @@
 import { ORG, TRUST } from '../data/site.js'
 
-const TOWN = 'Kuvala, Bhabhar, Banaskantha, Gujarat 385320'
-const MAP_EMBED = `https://maps.google.com/maps?q=${encodeURIComponent(TOWN)}&z=11&output=embed`
-const MAP_LINK = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(TOWN)}`
+const MAP_QUERY = 'Shree Khodadhor Panjrapol Kuvala'
+const MAP_EMBED = `https://maps.google.com/maps?q=${encodeURIComponent(MAP_QUERY)}&z=15&output=embed`
+const MAP_LINK = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(MAP_QUERY)}`
 
 export default function Footer() {
   return (
@@ -20,7 +20,7 @@ export default function Footer() {
             rel="noopener"
             className="mt-5 inline-flex items-center gap-2 text-sm text-ink underline underline-offset-4 transition-colors hover:text-maroon"
           >
-            <span aria-hidden>📍</span> Kuvala, Bhabhar — view on Google Maps
+            <span aria-hidden>📍</span> Shree Khodadhor Panjrapol, Kuvala — view on Google Maps
           </a>
         </div>
 
