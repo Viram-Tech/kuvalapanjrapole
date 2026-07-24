@@ -14,16 +14,18 @@ export default function Sponsor() {
           part of the daily care of a thousand animals.
         </p>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
-          {STRUCTURES.map((s) => {
+        <div className="mt-16 flex flex-col gap-16 md:mt-20 md:gap-24">
+          {STRUCTURES.map((s, i) => {
             const funded = s.status === 'funded'
+            const flip = i % 2 === 1
             return (
-              <article key={s.id} className="group flex flex-col overflow-hidden rounded-none border border-line">
-                <div className="relative overflow-hidden">
+              <article key={s.id} className="group grid items-center gap-8 md:grid-cols-2 md:gap-14">
+                {/* Image (zooms on hover) */}
+                <div className={`relative overflow-hidden border border-line ${flip ? 'md:order-2' : ''}`}>
                   <img
                     src={s.image}
                     alt={s.name}
-                    className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="h-72 w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 md:h-[26rem]"
                   />
                   <span
                     className={`absolute left-4 top-4 rounded-full px-3 py-1 text-xs font-semibold shadow-sm ${
@@ -33,15 +35,17 @@ export default function Sponsor() {
                     {funded ? t('common.funded') : t('common.available')}
                   </span>
                 </div>
-                <div className="flex flex-1 flex-col p-6">
-                  <div className="flex items-baseline justify-between gap-3">
-                    <h3 className="font-display text-2xl text-ink">{s.name}</h3>
-                    <span className="font-display text-lg text-maroon">{s.amount}</span>
+
+                {/* Text */}
+                <div className={flip ? 'md:order-1' : ''}>
+                  <div className="flex items-baseline justify-between gap-4">
+                    <h3 className="font-display text-3xl text-ink sm:text-4xl">{s.name}</h3>
+                    <span className="font-display text-xl text-maroon">{s.amount}</span>
                   </div>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-2">{s.blurb}</p>
+                  <p className="mt-5 max-w-md text-lg leading-relaxed text-ink-2">{s.blurb}</p>
                   <a
                     href="#contact"
-                    className={`mt-6 rounded-full px-5 py-3 text-center font-semibold transition-colors ${
+                    className={`mt-8 inline-block rounded-full px-6 py-3 font-semibold transition-colors ${
                       funded
                         ? 'pointer-events-none border border-line text-ink/40'
                         : 'bg-maroon text-paper hover:bg-maroon-dark'
