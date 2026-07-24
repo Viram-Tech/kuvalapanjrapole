@@ -29,7 +29,7 @@ export default function Footer() {
           <iframe
             title="Kuvala location on Google Maps"
             src={MAP_EMBED}
-            className="h-56 w-full grayscale transition-[filter] duration-500 hover:grayscale-0"
+            className="h-56 w-full"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
