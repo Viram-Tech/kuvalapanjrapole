@@ -9,28 +9,28 @@ const MAP_LINK = `https://www.google.com/maps/search/?api=1&query=${encodeURICom
 export default function Footer() {
   const { c } = useContent()
   return (
-    <footer className="border-t border-line px-4 py-14 sm:px-6">
+    <footer className="bg-wine px-4 py-14 text-white sm:px-6">
       <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[1.4fr_1fr]">
         <div>
           <div className="flex items-center gap-3">
             <img src="/favicon.png" alt="" aria-hidden="true" className="h-8 w-auto" />
-            <span lang="en" className="font-display text-lg font-semibold tracking-tight text-ink">{ORG.brand}</span>
+            <span lang="en" className="font-display text-lg font-semibold tracking-tight text-white">{ORG.brand}</span>
           </div>
-          <p className="mt-5 max-w-sm text-sm text-ink-2">
+          <p className="mt-5 max-w-sm text-sm text-white/60">
             {ORG.nameEn} — {c.footer.blurbSuffix} ({TRUST.reg80G}).
           </p>
           <a
             href={MAP_LINK}
             target="_blank"
             rel="noopener"
-            className="mt-5 inline-flex items-center gap-2 text-sm text-ink underline underline-offset-4 transition-colors hover:text-maroon"
+            className="mt-5 inline-flex items-center gap-2 text-sm text-white/80 underline underline-offset-4 transition-colors hover:text-white"
           >
             {c.footer.mapLink}
           </a>
         </div>
 
         {/* Town location */}
-        <div className="overflow-hidden border border-line">
+        <div className="overflow-hidden border border-white/15">
           <iframe
             title="Shri Radhanpur Khodadhor Panjrapole Sanstha on Google Maps"
             src={MAP_EMBED}
@@ -42,8 +42,8 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto mt-10 flex max-w-7xl flex-col gap-2 border-t border-line pt-6 text-sm text-ink-2 sm:flex-row sm:items-center sm:justify-between">
-        <p lang="gu" className="font-guj text-base text-ink">{ORG.nameGu}</p>
+      <div className="mx-auto mt-10 flex max-w-7xl flex-col gap-2 border-t border-white/15 pt-6 text-sm text-white/60 sm:flex-row sm:items-center sm:justify-between">
+        <p lang="gu" className="font-guj text-base text-white">{ORG.nameGu}</p>
         <p>{c.footer.tagline}</p>
       </div>
     </footer>
