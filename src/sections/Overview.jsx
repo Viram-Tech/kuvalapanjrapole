@@ -1,8 +1,6 @@
 import { useLang } from '../i18n.jsx'
 import { STATS } from '../data/site.js'
 
-const SHELTERS = ['Cows', 'Oxen', 'Buffalo calves', 'Goats', 'Sheep', 'Nilgai', 'Birds', 'Disabled & stray']
-
 // Approach principles — a 2×2 grid of heading + description.
 const APPROACH = [
   { t: 'Rescue & shelter', d: 'Animals bound for slaughter or abandoned on the road are brought in and given a permanent home — no matter their condition.' },
@@ -11,26 +9,25 @@ const APPROACH = [
   { t: 'Dignified last rites', d: 'Care does not end when a life does — the tabut shelter gives animals dignity in their final days and rites.' },
 ]
 
-// Scattered photo band shown between the intro and the approach (stays dark).
+// Two offset square photos on the page background.
 const COLLAGE = [
-  { src: '/images/xservices-img1.jpg', cls: 'right-[6%] top-[8%] w-[32%] aspect-[4/3]' },
-  { src: '/images/watertank.jpg', cls: 'left-[7%] top-[42%] w-[27%] aspect-[4/3]' },
-  { src: '/images/chabutra.jpg', cls: 'left-[41%] top-[54%] w-[23%] aspect-[3/4]' },
+  { src: '/images/xabout.jpg', cls: 'left-[9%] top-[6%] w-[36%] aspect-square' },
+  { src: '/images/home.jpg', cls: 'right-[9%] top-[30%] w-[38%] aspect-square' },
 ]
 
 function Collage() {
   return (
-    <div className="relative left-1/2 my-24 w-screen -translate-x-1/2 overflow-hidden bg-ink md:my-32">
-      {/* mobile — simple row */}
-      <div className="grid grid-cols-2 gap-3 px-5 py-14 md:hidden">
+    <div className="relative left-1/2 my-24 w-screen -translate-x-1/2 overflow-hidden md:my-32">
+      {/* mobile — stacked */}
+      <div className="grid grid-cols-1 gap-4 px-6 sm:grid-cols-2 md:hidden">
         {COLLAGE.map((im) => (
-          <img key={im.src} src={im.src} alt="" aria-hidden="true" className="h-40 w-full object-cover" />
+          <img key={im.src} src={im.src} alt="" aria-hidden="true" className="aspect-square w-full object-cover" />
         ))}
       </div>
-      {/* desktop — scattered */}
-      <div className="relative mx-auto hidden h-[88vh] max-w-7xl md:block">
+      {/* desktop — two offset squares */}
+      <div className="relative mx-auto hidden h-[85vh] max-w-6xl md:block">
         {COLLAGE.map((im) => (
-          <img key={im.src} src={im.src} alt="" aria-hidden="true" className={`absolute object-cover shadow-2xl ${im.cls}`} />
+          <img key={im.src} src={im.src} alt="" aria-hidden="true" className={`absolute object-cover ${im.cls}`} />
         ))}
       </div>
     </div>
@@ -59,7 +56,7 @@ export default function Overview() {
         </dl>
       </div>
 
-      {/* Scattered photo band */}
+      {/* Two offset square photos */}
       <Collage />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -76,25 +73,16 @@ export default function Overview() {
           </div>
         </div>
 
-        {/* What we shelter — heading + tag chips (dark panel) */}
-        <div className="mt-24 grid gap-x-14 gap-y-10 md:mt-32 md:grid-cols-[150px_1fr] md:gap-x-16">
+        {/* What we shelter — a paragraph */}
+        <div className="mt-24 grid gap-x-12 gap-y-6 md:mt-32 md:grid-cols-[150px_1fr] md:gap-x-16">
           <p className="eyebrow text-xs text-ink-2">Shelter</p>
-          <div>
+          <div className="max-w-2xl">
             <h3 className="font-display text-2xl tracking-tight text-ink">What we shelter</h3>
-            <p className="mt-4 max-w-lg leading-relaxed text-ink-2">
-              Not one kind of animal, but every kind that needs refuge — cattle turned away, and the lame, blind and
-              abandoned that no one else will keep.
+            <p className="mt-4 text-lg leading-relaxed text-ink-2">
+              Not one kind of animal, but every kind that needs refuge. Cows, oxen, buffalo calves, goats, sheep,
+              nilgai and birds — alongside the lame, blind and stray that no one else will keep — are all taken in and
+              cared for here.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3 bg-ink p-8">
-              {SHELTERS.map((a) => (
-                <span
-                  key={a}
-                  className="border border-paper/25 px-4 py-2.5 text-sm uppercase tracking-[0.1em] text-paper transition-colors hover:border-paper/60"
-                >
-                  {a}
-                </span>
-              ))}
-            </div>
           </div>
         </div>
       </div>
