@@ -17,6 +17,7 @@
   --color-maroon-dark: #9e0039; /* hover */
   --color-saffron: #c30047;
   --color-olive: #415094; /* "Funded" badge → indigo */
+  --color-coral: #f0656f; /* the site's coral stats band */
 
   /* Archivo first so Latin/English always renders in Archivo; the Noto fonts
      are fallbacks the browser uses only for Gujarati/Devanagari glyphs. This

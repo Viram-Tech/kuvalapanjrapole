@@ -11,13 +11,15 @@ export default function Overview() {
         <p className="font-display text-3xl leading-[1.12] tracking-tight text-ink sm:text-4xl md:text-5xl">
           {c.hero.mission}
         </p>
+      </div>
 
-        {/* Stats — clean, borderless */}
-        <dl className="mt-14 grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-4 md:mt-16">
+      {/* Stats — full-bleed coral band (site colour) */}
+      <div className="relative left-1/2 mt-16 w-screen -translate-x-1/2 bg-coral text-white md:mt-24">
+        <dl className="mx-auto grid max-w-7xl grid-cols-2 gap-x-8 gap-y-10 px-4 py-12 sm:grid-cols-4 sm:px-6 md:py-16">
           {STATS.map((s, i) => (
             <div key={s.label}>
-              <dt className="font-display text-4xl font-semibold text-ink sm:text-5xl">{s.value}</dt>
-              <dd className="mt-2 text-xs uppercase tracking-[0.16em] text-ink-2">{c.statLabels[i]}</dd>
+              <dt className="font-display text-4xl font-semibold sm:text-5xl">{s.value}</dt>
+              <dd className="mt-2 text-xs uppercase tracking-[0.16em] text-white/85">{c.statLabels[i]}</dd>
             </div>
           ))}
         </dl>

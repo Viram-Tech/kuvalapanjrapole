@@ -25,7 +25,6 @@ export default function Hero() {
           <source src="/hero.webm" type="video/webm" />
           <source src="/hero.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/20 to-ink/35" />
       </motion.div>
 
       {/* scroll hint */}

@@ -3,38 +3,12 @@ import { AnimatePresence, motion } from 'motion/react'
 import { LANGS, useContent } from '../i18n.jsx'
 
 const MENU = [
-  { key: 'home', href: '#top', icon: 'home' },
-  { key: 'sponsor', href: '#sponsor', icon: 'heart' },
-  { key: 'seva', href: '#seva', icon: 'chart' },
-  { key: 'about', href: '#about', icon: 'info' },
-  { key: 'contact', href: '#contact', icon: 'phone' },
+  { key: 'home', href: '#top' },
+  { key: 'sponsor', href: '#sponsor' },
+  { key: 'seva', href: '#seva' },
+  { key: 'about', href: '#about' },
+  { key: 'contact', href: '#contact' },
 ]
-
-function Icon({ name }) {
-  const props = {
-    viewBox: '0 0 24 24',
-    className: 'h-5 w-5 shrink-0 text-ink-2',
-    fill: 'none',
-    stroke: 'currentColor',
-    strokeWidth: 1.75,
-    strokeLinecap: 'round',
-    strokeLinejoin: 'round',
-  }
-  switch (name) {
-    case 'home':
-      return <svg {...props}><path d="M3 10.5 12 3l9 7.5" /><path d="M5 9.5V21h14V9.5" /></svg>
-    case 'heart':
-      return <svg {...props}><path d="M12 21s-7-4.4-9.3-8.6A4.6 4.6 0 0 1 12 6.5a4.6 4.6 0 0 1 9.3 5.9C19 16.6 12 21 12 21Z" /></svg>
-    case 'chart':
-      return <svg {...props}><path d="M4 4v16h16" /><path d="M8 16v-4" /><path d="M13 16V8" /><path d="M18 16v-6" /></svg>
-    case 'info':
-      return <svg {...props}><circle cx="12" cy="12" r="9" /><path d="M12 11.5v4.5M12 8h.01" /></svg>
-    case 'phone':
-      return <svg {...props}><path d="M5 4h3l2 5-2 1a11 11 0 0 0 5 5l1-2 5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" /></svg>
-    default:
-      return null
-  }
-}
 
 function LangRow({ className = '' }) {
   const { lang, setLang } = useContent()
@@ -149,19 +123,13 @@ export default function HorizonHeader() {
                       <a
                         href={m.href}
                         onClick={() => setOpen(false)}
-                        className="group flex items-center gap-3 rounded-md px-3 py-2.5 text-ink transition-colors hover:bg-paper-2"
+                        className="block rounded-md px-3 py-2.5 font-medium text-ink transition-colors hover:bg-paper-2"
                       >
-                        <Icon name={m.icon} />
-                        <span className="font-medium">{c.nav[m.key]}</span>
+                        {c.nav[m.key]}
                       </a>
                     </li>
                   ))}
                 </ul>
-
-                <p className="px-3 pb-2 pt-6 text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-2">{c.nav.language}</p>
-                <div className="px-3">
-                  <LangRow />
-                </div>
               </nav>
 
               {/* footer CTA */}
