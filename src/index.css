@@ -18,8 +18,11 @@
   --color-saffron: #123a5e;
   --color-olive: #46617c; /* "Funded" badge → slate blue */
 
-  --font-display: 'Archivo', ui-sans-serif, system-ui, sans-serif;
-  --font-sans: 'Archivo', ui-sans-serif, system-ui, sans-serif;
+  /* Archivo first so Latin/English always renders in Archivo; the Noto fonts
+     are fallbacks the browser uses only for Gujarati/Devanagari glyphs. This
+     keeps type consistent across language switches. */
+  --font-display: 'Archivo', 'Noto Sans Gujarati', 'Noto Sans Devanagari', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Archivo', 'Noto Sans Gujarati', 'Noto Sans Devanagari', ui-sans-serif, system-ui, sans-serif;
   --font-guj: 'Noto Sans Gujarati', sans-serif;
   --font-dev: 'Noto Sans Devanagari', sans-serif;
 }
@@ -49,14 +52,6 @@ body {
   font-weight: 500;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-}
-
-/* Language-specific type so Gujarati/Hindi render well */
-:lang(gu) {
-  font-family: var(--font-guj);
-}
-:lang(hi) {
-  font-family: var(--font-dev);
 }
 
 /* ---- Looping hero montage (ambient "loop video" feel) ------------------- */

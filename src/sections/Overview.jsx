@@ -9,31 +9,6 @@ const APPROACH = [
   { t: 'Dignified last rites', d: 'Care does not end when a life does — the tabut shelter gives animals dignity in their final days and rites.' },
 ]
 
-// Two offset square photos on the page background.
-const COLLAGE = [
-  { src: '/images/xabout.jpg', cls: 'left-[9%] top-[6%] w-[36%] aspect-square' },
-  { src: '/images/home.jpg', cls: 'right-[9%] top-[30%] w-[38%] aspect-square' },
-]
-
-function Collage() {
-  return (
-    <div className="relative left-1/2 my-24 w-screen -translate-x-1/2 overflow-hidden md:my-32">
-      {/* mobile — stacked */}
-      <div className="grid grid-cols-1 gap-4 px-6 sm:grid-cols-2 md:hidden">
-        {COLLAGE.map((im) => (
-          <img key={im.src} src={im.src} alt="" aria-hidden="true" className="aspect-square w-full object-cover" />
-        ))}
-      </div>
-      {/* desktop — two offset squares */}
-      <div className="relative mx-auto hidden h-[85vh] max-w-6xl md:block">
-        {COLLAGE.map((im) => (
-          <img key={im.src} src={im.src} alt="" aria-hidden="true" className={`absolute object-cover ${im.cls}`} />
-        ))}
-      </div>
-    </div>
-  )
-}
-
 export default function Overview() {
   const { t } = useLang()
 
@@ -56,10 +31,7 @@ export default function Overview() {
         </dl>
       </div>
 
-      {/* Two offset square photos */}
-      <Collage />
-
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 md:mt-32">
         {/* Approach — small label + 2×2 grid of principles */}
         <div className="grid gap-x-12 gap-y-10 md:grid-cols-[150px_1fr] md:gap-x-16">
           <p className="eyebrow text-xs text-ink-2">Approach</p>
