@@ -41,7 +41,7 @@ export default function Overview() {
     <section id="overview" className="py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         {/* Mission intro */}
-        <p className="max-w-4xl font-display text-3xl leading-[1.12] tracking-tight text-ink sm:text-4xl md:text-5xl">
+        <p className="font-display text-3xl leading-[1.12] tracking-tight text-ink sm:text-4xl md:text-5xl">
           {t('hero.body')}
         </p>
 

@@ -19,6 +19,9 @@ export default function Home() {
         <Overview />
         <Sponsor />
         <SevaReport />
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="border-t border-line" />
+        </div>
         <About />
         <Contact />
       </main>

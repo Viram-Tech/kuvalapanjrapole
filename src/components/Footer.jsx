@@ -7,11 +7,14 @@ const MAP_LINK = `https://www.google.com/maps/search/?api=1&query=${encodeURICom
 
 export default function Footer() {
   return (
-    <footer className="border-t border-line px-4 py-14 sm:px-6">
+    <footer className="bg-ink px-4 py-14 text-paper sm:px-6">
       <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[1.4fr_1fr]">
         <div>
-          <img src="/logo-transparent.png" alt={ORG.nameEn} className="h-9 w-auto" />
-          <p className="mt-5 max-w-sm text-sm text-ink-2">
+          <div className="flex items-center gap-3">
+            <img src="/favicon.png" alt="" aria-hidden="true" className="h-8 w-auto" />
+            <span lang="en" className="font-display text-lg font-semibold tracking-tight text-paper">{ORG.brand}</span>
+          </div>
+          <p className="mt-5 max-w-sm text-sm text-paper/60">
             {ORG.nameEn} — a Jain animal sanctuary in {ORG.place}. 80G tax-exempt
             registered trust ({TRUST.reg80G}).
           </p>
@@ -19,14 +22,14 @@ export default function Footer() {
             href={MAP_LINK}
             target="_blank"
             rel="noopener"
-            className="mt-5 inline-flex items-center gap-2 text-sm text-ink underline underline-offset-4 transition-colors hover:text-maroon"
+            className="mt-5 inline-flex items-center gap-2 text-sm text-paper underline underline-offset-4 transition-colors hover:text-white"
           >
-Shri Khodadhor Panjrapole, Kuvala — view on Google Maps
+            Shri Khodadhor Panjrapole, Kuvala — view on Google Maps
           </a>
         </div>
 
         {/* Town location */}
-        <div className="overflow-hidden border border-line">
+        <div className="overflow-hidden border border-paper/15">
           <iframe
             title="Shri Radhanpur Khodadhor Panjrapole Sanstha on Google Maps"
             src={MAP_EMBED}
@@ -38,8 +41,8 @@ Shri Khodadhor Panjrapole, Kuvala — view on Google Maps
         </div>
       </div>
 
-      <div className="mx-auto mt-10 flex max-w-7xl flex-col gap-2 border-t border-line pt-6 text-sm text-ink-2 sm:flex-row sm:items-center sm:justify-between">
-        <p lang="gu" className="font-guj text-base text-ink">{ORG.nameGu}</p>
+      <div className="mx-auto mt-10 flex max-w-7xl flex-col gap-2 border-t border-paper/15 pt-6 text-sm text-paper/60 sm:flex-row sm:items-center sm:justify-between">
+        <p lang="gu" className="font-guj text-base text-paper">{ORG.nameGu}</p>
         <p>Serving animals with compassion · ahimsa parmo dharma</p>
       </div>
     </footer>

@@ -46,6 +46,7 @@ export default function BrandMark() {
                 className="absolute right-full mr-[0.24em] h-[0.8em] w-auto"
               />
               <motion.h1
+                lang="en"
                 style={{ color }}
                 className="font-display font-semibold leading-[0.95] tracking-tight"
               >
