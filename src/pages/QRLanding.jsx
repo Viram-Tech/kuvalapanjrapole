@@ -68,10 +68,10 @@ export default function QRLanding() {
       {/* Directions + contact */}
       <div className="mt-6 grid grid-cols-2 gap-3">
         <a href={MAPS} target="_blank" rel="noopener" className="rounded-none border border-line px-4 py-4 text-center font-semibold text-ink">
-          📍 Directions
+          Directions
         </a>
         <a href="tel:+919586588261" className="rounded-none border border-line px-4 py-4 text-center font-semibold text-ink">
-          📞 Call
+          Call
         </a>
       </div>
 

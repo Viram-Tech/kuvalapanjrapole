@@ -21,7 +21,7 @@ export default function Footer() {
             rel="noopener"
             className="mt-5 inline-flex items-center gap-2 text-sm text-ink underline underline-offset-4 transition-colors hover:text-maroon"
           >
-            <span aria-hidden>📍</span> Shri Khodadhor Panjrapole, Kuvala — view on Google Maps
+Shri Khodadhor Panjrapole, Kuvala — view on Google Maps
           </a>
         </div>
 

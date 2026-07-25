@@ -14,9 +14,7 @@ export default function SevaReport() {
               medical and shelter carry the rest of daily care.
             </p>
           </div>
-          <div className="rounded-none border border-line p-5 sm:p-8">
-            <SevaChart />
-          </div>
+          <SevaChart />
         </div>
       </div>
     </section>

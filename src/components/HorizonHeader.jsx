@@ -119,18 +119,15 @@ export default function HorizonHeader() {
               onClick={() => setOpen(false)}
             />
             <motion.aside
-              className="fixed left-0 top-0 z-[70] flex h-full w-[84%] max-w-xs flex-col border-r border-line bg-paper shadow-2xl"
-              initial={{ x: '-100%' }}
+              className="fixed right-0 top-0 z-[70] flex h-full w-[84%] max-w-xs flex-col border-l border-line bg-paper shadow-2xl"
+              initial={{ x: '100%' }}
               animate={{ x: 0 }}
-              exit={{ x: '-100%' }}
+              exit={{ x: '100%' }}
               transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
             >
               {/* drawer header */}
               <div className="flex items-center justify-between border-b border-line px-5 py-4">
-                <div className="flex items-center gap-2.5">
-                  <img src="/favicon.png" alt="" aria-hidden="true" className="h-6 w-auto" />
-                  <span className="font-display text-sm font-semibold uppercase tracking-[0.12em] text-ink">Menu</span>
-                </div>
+                <span className="font-display text-sm font-semibold uppercase tracking-[0.12em] text-ink">Menu</span>
                 <button
                   type="button"
                   onClick={() => setOpen(false)}
