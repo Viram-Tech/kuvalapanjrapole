@@ -19,7 +19,7 @@
   --color-olive: #46617c; /* "Funded" badge → slate blue */
 
   --font-display: 'Archivo', ui-sans-serif, system-ui, sans-serif;
-  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Archivo', ui-sans-serif, system-ui, sans-serif;
   --font-guj: 'Noto Sans Gujarati', sans-serif;
   --font-dev: 'Noto Sans Devanagari', sans-serif;
 }

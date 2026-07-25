@@ -84,25 +84,25 @@ export default function HorizonHeader() {
         aria-hidden={!show}
       >
         <div className="mx-auto grid max-w-[1600px] grid-cols-3 items-center px-4 py-4 sm:px-8">
-          {/* Menu (left) */}
+          {/* Language (left) */}
+          <div className="justify-self-start">
+            <LangRow />
+          </div>
+
+          {/* Center left empty — the shared BrandMark shrinks into this space */}
+          <span aria-hidden />
+
+          {/* Menu (right) */}
           <button
             type="button"
             onClick={() => setOpen((o) => !o)}
-            className="flex items-center gap-2 justify-self-start text-sm text-ink transition-colors hover:text-maroon"
+            className="flex items-center gap-2 justify-self-end text-sm text-ink transition-colors hover:text-maroon"
           >
             <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round">
               <path d="M4 7h16M4 12h16M4 17h16" />
             </svg>
             Menu
           </button>
-
-          {/* Center left empty — the shared BrandMark shrinks into this space */}
-          <span aria-hidden />
-
-          {/* Language (right) */}
-          <div className="justify-self-end">
-            <LangRow />
-          </div>
         </div>
       </motion.header>
 
