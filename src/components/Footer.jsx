@@ -1,3 +1,4 @@
+import { useContent } from '../i18n.jsx'
 import { ORG, TRUST } from '../data/site.js'
 
 const MAP_QUERY = 'Shri Radhanpur Khodadhor Panjrapole Sanstha'
@@ -6,6 +7,7 @@ const MAP_EMBED =
 const MAP_LINK = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(MAP_QUERY)}`
 
 export default function Footer() {
+  const { c } = useContent()
   return (
     <footer className="bg-ink px-4 py-14 text-paper sm:px-6">
       <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[1.4fr_1fr]">
@@ -15,8 +17,7 @@ export default function Footer() {
             <span lang="en" className="font-display text-lg font-semibold tracking-tight text-paper">{ORG.brand}</span>
           </div>
           <p className="mt-5 max-w-sm text-sm text-paper/60">
-            {ORG.nameEn} — a Jain animal sanctuary in {ORG.place}. 80G tax-exempt
-            registered trust ({TRUST.reg80G}).
+            {ORG.nameEn} — {c.footer.blurbSuffix} ({TRUST.reg80G}).
           </p>
           <a
             href={MAP_LINK}
@@ -24,7 +25,7 @@ export default function Footer() {
             rel="noopener"
             className="mt-5 inline-flex items-center gap-2 text-sm text-paper underline underline-offset-4 transition-colors hover:text-white"
           >
-            Shri Khodadhor Panjrapole, Kuvala — view on Google Maps
+            {c.footer.mapLink}
           </a>
         </div>
 
@@ -43,7 +44,7 @@ export default function Footer() {
 
       <div className="mx-auto mt-10 flex max-w-7xl flex-col gap-2 border-t border-paper/15 pt-6 text-sm text-paper/60 sm:flex-row sm:items-center sm:justify-between">
         <p lang="gu" className="font-guj text-base text-paper">{ORG.nameGu}</p>
-        <p>Serving animals with compassion · ahimsa parmo dharma</p>
+        <p>{c.footer.tagline}</p>
       </div>
     </footer>
   )

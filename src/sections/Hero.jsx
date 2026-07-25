@@ -1,9 +1,11 @@
 import { motion } from 'motion/react'
+import { useContent } from '../i18n.jsx'
 
 // Horizon-style opening: a small centered window opens (clip-path reveal) onto
 // the video. The video keeps its original size/framing the whole time — the
 // window uncovers more of it, it does NOT zoom. The name lives in <BrandMark/>.
 export default function Hero() {
+  const { c } = useContent()
   return (
     <section id="top" className="relative flex min-h-[100svh] items-center justify-center overflow-hidden bg-black">
       {/* Clipped layer — revealed by the opening window */}
@@ -33,7 +35,7 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ delay: 3.4, duration: 0.8 }}
       >
-        <span className="eyebrow text-[10px]">Scroll</span>
+        <span className="eyebrow text-[10px]">{c.hero.scroll}</span>
       </motion.div>
     </section>
   )

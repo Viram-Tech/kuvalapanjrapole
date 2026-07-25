@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useContent } from '../i18n.jsx'
 import { SEVA } from '../data/site.js'
 
 // Stacked bar chart of monthly spend by category. Rising totals read as
@@ -23,6 +24,7 @@ const x = (i) => M.left + i * bandW + (bandW - barW) / 2
 const y = (v) => M.top + plotH - (v / maxTotal) * plotH
 
 export default function SevaChart() {
+  const { c: content } = useContent()
   const [hover, setHover] = useState(null) // index
 
   return (
@@ -31,7 +33,7 @@ export default function SevaChart() {
         {/* gridlines + y axis labels */}
         {yTicks.map((v) => (
           <g key={v}>
-            <line x1={M.left} x2={W - M.right} y1={y(v)} y2={y(v)} stroke="#b4c6d8" strokeWidth="1" />
+            <line x1={M.left} x2={W - M.right} y1={y(v)} y2={y(v)} stroke="#e3ddf2" strokeWidth="1" />
             <text x={M.left - 10} y={y(v) + 4} textAnchor="end" className="fill-ink/45" fontSize="12">
               {v}
             </text>
@@ -95,10 +97,10 @@ export default function SevaChart() {
         {CATS.map((c) => (
           <span key={c.key} className="inline-flex items-center gap-2 text-sm text-ink/70">
             <span className="h-2.5 w-2.5 rounded-full" style={{ background: c.color }} />
-            {c.label}
+            {content.seva.categories[c.key]}
           </span>
         ))}
-        <span className="ml-auto text-xs text-ink/45">Amounts in {SEVA.unit} · aggregate, no names</span>
+        <span className="ml-auto text-xs text-ink/45">{content.seva.unitPrefix} {SEVA.unit} · {content.seva.note}</span>
       </figcaption>
 
       {/* tooltip */}
@@ -111,7 +113,7 @@ export default function SevaChart() {
             {CATS.map((c) => (
               <li key={c.key} className="flex items-center gap-2 text-ink/75">
                 <span className="h-2 w-2 rounded-full" style={{ background: c.color }} />
-                <span className="w-16">{c.label}</span>
+                <span className="w-16">{content.seva.categories[c.key]}</span>
                 <span className="tabular-nums">{MONTHS[hover][c.key].toFixed(1)}</span>
               </li>
             ))}

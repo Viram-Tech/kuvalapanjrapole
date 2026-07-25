@@ -1,4 +1,4 @@
-import { useLang } from '../i18n.jsx'
+import { useContent } from '../i18n.jsx'
 import { STRUCTURES } from '../data/site.js'
 
 function Spark() {
@@ -10,40 +10,35 @@ function Spark() {
 }
 
 export default function Sponsor() {
-  const { t } = useLang()
+  const { c } = useContent()
   return (
     <section id="sponsor" className="bg-ink px-4 py-24 text-paper sm:px-6 md:py-32">
       <div className="mx-auto max-w-6xl">
         <h2 className="font-display text-4xl font-semibold leading-[1.02] tracking-tight text-paper sm:text-5xl md:text-6xl">
-          Give a name to shelter.
+          {c.sponsor.title}
         </h2>
-        <p className="mt-6 max-w-2xl text-lg text-paper/60">
-          Three permanent structures anchor the sanctuary. Endow one at ₹5,00,000 —
-          your family or guru’s name carried on it in perpetuity.
-        </p>
+        <p className="mt-6 max-w-2xl text-lg text-paper/60">{c.sponsor.intro}</p>
 
         <div className="mt-14 space-y-16 md:mt-20 md:space-y-24">
           {STRUCTURES.map((s, i) => {
             const funded = s.status === 'funded'
             const flip = i % 2 === 1
+            const st = c.sponsor.structures[s.id] || {}
             return (
-              <article
-                key={s.id}
-                className="grid items-center gap-8 md:grid-cols-2 md:gap-12"
-              >
+              <article key={s.id} className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
                 {/* Image */}
                 <div className={`overflow-hidden rounded-2xl ${flip ? 'md:order-2' : ''}`}>
-                  <img src={s.image} alt={s.name} className="h-64 w-full object-cover md:h-80" />
+                  <img src={s.image} alt={st.name} className="h-64 w-full object-cover md:h-80" />
                 </div>
 
                 {/* Text */}
                 <div className={flip ? 'md:order-1 md:px-2' : 'md:px-2'}>
                   <p className="flex items-center gap-2 text-sm text-paper/50">
                     <Spark />
-                    {funded ? t('common.funded') : 'Naming opportunity'}
+                    {funded ? c.sponsor.funded : c.sponsor.eyebrow}
                   </p>
-                  <h3 className="mt-3 font-display text-3xl tracking-tight text-paper sm:text-4xl">{s.name}</h3>
-                  <p className="mt-4 max-w-md leading-relaxed text-paper/60">{s.blurb}</p>
+                  <h3 className="mt-3 font-display text-3xl tracking-tight text-paper sm:text-4xl">{st.name}</h3>
+                  <p className="mt-4 max-w-md leading-relaxed text-paper/60">{st.blurb}</p>
                   <a
                     href="#contact"
                     className={`mt-7 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-colors ${
@@ -52,7 +47,7 @@ export default function Sponsor() {
                         : 'bg-paper/10 text-paper hover:bg-paper/20'
                     }`}
                   >
-                    {funded ? t('common.funded') : `Sponsor · ${s.amount}`}
+                    {funded ? c.sponsor.funded : `${c.sponsor.cta} · ${s.amount}`}
                   </a>
                 </div>
               </article>

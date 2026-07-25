@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
-import { LANGS, useLang } from '../i18n.jsx'
+import { LANGS, useContent } from '../i18n.jsx'
 
 const MENU = [
   { key: 'home', href: '#top', icon: 'home' },
@@ -37,7 +37,7 @@ function Icon({ name }) {
 }
 
 function LangRow({ className = '' }) {
-  const { lang, setLang } = useLang()
+  const { lang, setLang } = useContent()
   return (
     <div className={`flex items-center gap-1.5 ${className}`}>
       {LANGS.map((l, i) => (
@@ -58,7 +58,7 @@ function LangRow({ className = '' }) {
 }
 
 export default function HorizonHeader() {
-  const { t } = useLang()
+  const { c } = useContent()
   const [show, setShow] = useState(false) // revealed after the hero (page 2+)
   const [open, setOpen] = useState(false)
 
@@ -101,7 +101,7 @@ export default function HorizonHeader() {
             <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round">
               <path d="M4 7h16M4 12h16M4 17h16" />
             </svg>
-            Menu
+            {c.nav.menu}
           </button>
         </div>
       </motion.header>
@@ -127,7 +127,7 @@ export default function HorizonHeader() {
             >
               {/* drawer header */}
               <div className="flex items-center justify-between border-b border-line px-5 py-4">
-                <span className="font-display text-sm font-semibold uppercase tracking-[0.12em] text-ink">Menu</span>
+                <span className="font-display text-sm font-semibold uppercase tracking-[0.12em] text-ink">{c.nav.menu}</span>
                 <button
                   type="button"
                   onClick={() => setOpen(false)}
@@ -142,7 +142,7 @@ export default function HorizonHeader() {
 
               {/* nav groups */}
               <nav className="flex-1 overflow-y-auto px-3 py-5">
-                <p className="px-3 pb-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-2">Explore</p>
+                <p className="px-3 pb-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-2">{c.nav.explore}</p>
                 <ul className="space-y-0.5">
                   {MENU.map((m) => (
                     <li key={m.key}>
@@ -152,13 +152,13 @@ export default function HorizonHeader() {
                         className="group flex items-center gap-3 rounded-md px-3 py-2.5 text-ink transition-colors hover:bg-paper-2"
                       >
                         <Icon name={m.icon} />
-                        <span className="font-medium">{t(`nav.${m.key}`)}</span>
+                        <span className="font-medium">{c.nav[m.key]}</span>
                       </a>
                     </li>
                   ))}
                 </ul>
 
-                <p className="px-3 pb-2 pt-6 text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-2">Language</p>
+                <p className="px-3 pb-2 pt-6 text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-2">{c.nav.language}</p>
                 <div className="px-3">
                   <LangRow />
                 </div>
@@ -171,7 +171,7 @@ export default function HorizonHeader() {
                   onClick={() => setOpen(false)}
                   className="block rounded-md bg-maroon px-5 py-3 text-center font-semibold text-paper transition-colors hover:bg-maroon-dark"
                 >
-                  {t('nav.donate')}
+                  {c.nav.donate}
                 </a>
               </div>
             </motion.aside>

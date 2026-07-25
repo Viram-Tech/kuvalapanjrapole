@@ -5,18 +5,18 @@
    Editorial minimalism (Horizon-style) on a warm sanctuary palette.
 ------------------------------------------------------------------------- */
 @theme {
-  /* RRE-style palette — pale-blue paper, deep-navy ink & accents. */
-  --color-paper: #dbe5ef; /* pale blue page */
-  --color-paper-2: #cad9e8; /* raised blue surface */
-  --color-ink: #0c1c2c; /* deep navy text */
-  --color-ink-2: #566a7e; /* slate blue-gray (secondary) */
-  --color-line: #b4c6d8; /* hairline dividers */
+  /* Palette taken from kuvalapanjrapole.com — crimson brand, indigo, lavender. */
+  --color-paper: #f9f9ff; /* near-white lavender page */
+  --color-paper-2: #f0e9ff; /* light lavender surface */
+  --color-ink: #1f2b7b; /* deep indigo (text + dark sections) */
+  --color-ink-2: #828bb2; /* muted slate-blue (secondary) */
+  --color-line: #e3ddf2; /* light lavender dividers */
 
-  /* Accents in the same blue family (primary actions, badges, emphasis). */
-  --color-maroon: #123a5e; /* primary actions → deep blue */
-  --color-maroon-dark: #0b2942; /* hover */
-  --color-saffron: #123a5e;
-  --color-olive: #46617c; /* "Funded" badge → slate blue */
+  /* Brand accent — the crimson from the site/logo. */
+  --color-maroon: #c30047; /* primary actions / accent */
+  --color-maroon-dark: #9e0039; /* hover */
+  --color-saffron: #c30047;
+  --color-olive: #415094; /* "Funded" badge → indigo */
 
   /* Archivo first so Latin/English always renders in Archivo; the Noto fonts
      are fallbacks the browser uses only for Gujarati/Devanagari glyphs. This
