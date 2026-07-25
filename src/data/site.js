@@ -56,13 +56,13 @@ export const STRUCTURES = [
 // (Representative figures — replace with the trust’s actual monthly totals.)
 export const SEVA = {
   unit: '₹ lakh',
-  // Indigo tonal ramp (deep → light) matching the site palette; the stacked
-  // segments read by tone + the legend.
+  // Crimson → coral tonal ramp (deep → light) matching the site palette; the
+  // stacked segments read by tone + the legend.
   categories: [
-    { key: 'fodder', label: 'Fodder', color: '#1f2b7b' },
-    { key: 'shelter', label: 'Shelter', color: '#415094' },
-    { key: 'medical', label: 'Medical', color: '#7581c0' },
-    { key: 'staff', label: 'Staff', color: '#aab2dd' },
+    { key: 'fodder', label: 'Fodder', color: '#9e0039' },
+    { key: 'shelter', label: 'Shelter', color: '#c30047' },
+    { key: 'medical', label: 'Medical', color: '#ec5f6c' },
+    { key: 'staff', label: 'Staff', color: '#f6a3ab' },
   ],
   months: [
     { month: 'Feb', fodder: 3.4, shelter: 1.1, medical: 0.8, staff: 1.2 },

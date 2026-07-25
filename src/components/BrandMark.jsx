@@ -18,7 +18,7 @@ export default function BrandMark() {
   const end = h * 0.7 // shrink completes at 70% of the first screen
   const shrink = useTransform(scrollY, [0, end], [1, 0.28])
   const lift = useTransform(scrollY, [0, end], [0, -14]) // nudge up into the bar
-  const color = useTransform(scrollY, [0, end], ['#f9f9ff', '#1f2b7b'])
+  const color = useTransform(scrollY, [0, end], ['#f9f9ff', '#1a1a1a'])
   const subOpacity = useTransform(scrollY, [0, end * 0.7], [1, 0.55])
   const iconOpacity = useTransform(scrollY, [end * 0.55, end], [0, 1]) // navbar only
 

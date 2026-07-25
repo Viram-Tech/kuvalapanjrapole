@@ -9,6 +9,15 @@ import SevaReport from '../sections/SevaReport.jsx'
 import About from '../sections/About.jsx'
 import Contact from '../sections/Contact.jsx'
 
+// Thin full-width rule to separate the (all-light) sections.
+function Rule() {
+  return (
+    <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      <div className="border-t border-line" />
+    </div>
+  )
+}
+
 export default function Home() {
   return (
     <>
@@ -17,12 +26,13 @@ export default function Home() {
       <main>
         <Hero />
         <Overview />
+        <Rule />
         <Sponsor />
+        <Rule />
         <SevaReport />
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="border-t border-line" />
-        </div>
+        <Rule />
         <About />
+        <Rule />
         <Contact />
       </main>
       <Footer />
