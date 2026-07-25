@@ -5,19 +5,18 @@
    Editorial minimalism (Horizon-style) on a warm sanctuary palette.
 ------------------------------------------------------------------------- */
 @theme {
-  /* Horizon-style neutral monochrome — near-white paper, near-black ink,
-     neutral grays. Photos carry all the colour; the UI stays achromatic. */
-  --color-paper: #f4f3f0; /* near-white page */
-  --color-paper-2: #e9e7e2; /* faint neutral surface */
-  --color-ink: #171614; /* near-black text */
-  --color-ink-2: #85837c; /* neutral gray (secondary) */
-  --color-line: #dbdad4; /* hairline dividers */
+  /* RRE-style palette — pale-blue paper, deep-navy ink & accents. */
+  --color-paper: #dbe5ef; /* pale blue page */
+  --color-paper-2: #cad9e8; /* raised blue surface */
+  --color-ink: #0c1c2c; /* deep navy text */
+  --color-ink-2: #566a7e; /* slate blue-gray (secondary) */
+  --color-line: #b4c6d8; /* hairline dividers */
 
-  /* Former accents, now neutral so every existing usage reads monochrome. */
-  --color-maroon: #171614; /* primary actions → ink */
-  --color-maroon-dark: #000000; /* hover */
-  --color-saffron: #171614;
-  --color-olive: #57564f; /* "Funded" badge → dark gray */
+  /* Accents in the same blue family (primary actions, badges, emphasis). */
+  --color-maroon: #123a5e; /* primary actions → deep blue */
+  --color-maroon-dark: #0b2942; /* hover */
+  --color-saffron: #123a5e;
+  --color-olive: #46617c; /* "Funded" badge → slate blue */
 
   --font-display: 'Archivo', ui-sans-serif, system-ui, sans-serif;
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
