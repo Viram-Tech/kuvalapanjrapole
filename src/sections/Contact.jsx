@@ -3,7 +3,7 @@ import { TRUST, ORG } from '../data/site.js'
 
 function Row({ label, value }) {
   return (
-    <div className="flex flex-col gap-1 border-b border-white/15 py-4 sm:flex-row sm:items-baseline sm:justify-between">
+    <div className="flex flex-col gap-1 border-b border-white/25 py-4 sm:flex-row sm:items-baseline sm:justify-between">
       <dt className="eyebrow text-[11px] text-white/50">{label}</dt>
       <dd className="font-medium text-white sm:text-right">{value}</dd>
     </div>
@@ -14,7 +14,7 @@ export default function Contact() {
   const { c } = useContent()
   const cc = c.contact
   return (
-    <section id="contact" className="bg-wine px-4 py-24 text-white sm:px-6 md:py-32">
+    <section id="contact" className="bg-coral px-4 py-24 text-white sm:px-6 md:py-32">
       <div className="mx-auto max-w-7xl">
         <h2 className="font-display text-4xl font-semibold leading-[1.02] tracking-tight text-white sm:text-5xl md:text-6xl">
           {cc.title}

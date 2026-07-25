@@ -9,7 +9,7 @@ const MAP_LINK = `https://www.google.com/maps/search/?api=1&query=${encodeURICom
 export default function Footer() {
   const { c } = useContent()
   return (
-    <footer className="bg-wine px-4 py-14 text-white sm:px-6">
+    <footer className="border-t border-white/25 bg-wine px-4 py-14 text-white sm:px-6">
       <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[1.4fr_1fr]">
         <div>
           <div className="flex items-center gap-3">
