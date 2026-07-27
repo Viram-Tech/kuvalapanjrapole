@@ -72,8 +72,8 @@ export default {
     lineage:
       'Shri Khodadhor Panjrapole rises from the soil of Kuvala — the birthplace connection of Pu. Acharya Bhagwant Shri Surendrasurishwarji M.S. — and grows under the divine blessing of P. Pu. Acharya Bhagwant Shri Ramsurishwarji M.S. (Dehlawala).',
     land:
-      'On roughly nine acres in Bhabhar taluka, the sanctuary shelters over a thousand animals once destined for slaughter. What began as a refuge for a few is today a working panjrapole — hospital, sheds, fodder stores, water and staff — run by the Shri Phuvala Shvetambar Murtipujak Jain Sangh.',
-    sangh: 'Run by the Shri Phuvala Shvetambar Murtipujak Jain Sangh, in service of ahimsa — non-violence toward every living being.',
+      'On roughly nine acres in Bhabhar taluka, the sanctuary shelters over a thousand animals once destined for slaughter. What began as a refuge for a few is today a working panjrapole — hospital, sheds, fodder stores, water and staff — run by the Shri Kuvala Shvetambar Murtipujak Jain Sangh.',
+    sangh: 'Run by the Shri Kuvala Shvetambar Murtipujak Jain Sangh, in service of ahimsa — non-violence toward every living being.',
     gallery: 'Gallery',
   },
 

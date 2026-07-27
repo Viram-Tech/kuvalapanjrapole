@@ -33,7 +33,7 @@ export default function SevaChart() {
         {/* gridlines + y axis labels */}
         {yTicks.map((v) => (
           <g key={v}>
-            <line x1={M.left} x2={W - M.right} y1={y(v)} y2={y(v)} stroke="#e3ddf2" strokeWidth="1" />
+            <line x1={M.left} x2={W - M.right} y1={y(v)} y2={y(v)} stroke="#ebdcb9" strokeWidth="1" />
             <text x={M.left - 10} y={y(v) + 4} textAnchor="end" className="fill-ink/45" fontSize="12">
               {v}
             </text>

@@ -5,24 +5,22 @@
    Editorial minimalism (Horizon-style) on a warm sanctuary palette.
 ------------------------------------------------------------------------- */
 @theme {
-  /* Palette taken from kuvalapanjrapole.com — crimson brand, indigo, lavender. */
-  --color-paper: #f9f9ff; /* near-white lavender page */
-  --color-paper-2: #f0e9ff; /* light lavender surface */
-  --color-ink: #1a1a1a; /* near-black text */
-  --color-ink-2: #6b6b72; /* neutral gray (secondary) */
-  --color-line: #e3ddf2; /* light lavender dividers */
+  /* Warm sanctuary palette: ivory paper, sand surfaces, rich earth tones. */
+  --color-paper: #fdfcf7; /* warm ivory page */
+  --color-paper-2: #f7f4ea; /* warm sandy cream surface */
+  --color-ink: #29211c; /* rich earth charcoal text */
+  --color-ink-2: #7d6e5c; /* warm stone gray text */
+  --color-line: #ebdcb9; /* warm golden-sand border */
 
-  /* Brand accent — the crimson from the site/logo. */
-  --color-maroon: #c30047; /* primary actions / accent */
-  --color-maroon-dark: #9e0039; /* hover */
-  --color-saffron: #c30047;
-  --color-olive: #415094; /* "Funded" badge → indigo */
-  --color-coral: #f0656f; /* the site's coral stats band */
-  --color-wine: #301a22; /* the site's dark maroon footer */
+  /* Accents */
+  --color-maroon: #c82d3b; /* primary actions / accent */
+  --color-maroon-dark: #9e1c27; /* hover */
+  --color-saffron: #f2994a; /* glowing warm saffron */
+  --color-olive: #6b8e23; /* olive green for nature/peace */
+  --color-coral: #e27a5b; /* warm terracotta stats band */
+  --color-wine: #4a2c26; /* rich warm mahogany footer */
 
-  /* Archivo first so Latin/English always renders in Archivo; the Noto fonts
-     are fallbacks the browser uses only for Gujarati/Devanagari glyphs. This
-     keeps type consistent across language switches. */
+  /* Fonts */
   --font-display: 'Archivo', 'Noto Sans Gujarati', 'Noto Sans Devanagari', ui-sans-serif, system-ui, sans-serif;
   --font-sans: 'Archivo', 'Noto Sans Gujarati', 'Noto Sans Devanagari', ui-sans-serif, system-ui, sans-serif;
   --font-guj: 'Noto Sans Gujarati', sans-serif;

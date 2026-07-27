@@ -8,7 +8,7 @@ export const ORG = {
   brand: 'Khodadhor Panjrapole', // display wordmark (no honorific)
   nameGu: 'શ્રી ખોડાધોર પાંજરાપોળ',
   place: 'Kuvala, Bhabhar, Banaskantha, North Gujarat',
-  sangh: 'Shri Phuvala Shvetambar Murtipujak Jain Sangh',
+  sangh: 'Shri Kuvala Shvetambar Murtipujak Jain Sangh',
 }
 
 export const STATS = [
@@ -59,10 +59,10 @@ export const SEVA = {
   // Crimson → coral tonal ramp (deep → light) matching the site palette; the
   // stacked segments read by tone + the legend.
   categories: [
-    { key: 'fodder', label: 'Fodder', color: '#9e0039' },
-    { key: 'shelter', label: 'Shelter', color: '#c30047' },
-    { key: 'medical', label: 'Medical', color: '#ec5f6c' },
-    { key: 'staff', label: 'Staff', color: '#f6a3ab' },
+    { key: 'fodder', label: 'Fodder', color: '#6b8e23' },
+    { key: 'shelter', label: 'Shelter', color: '#c82d3b' },
+    { key: 'medical', label: 'Medical', color: '#e27a5b' },
+    { key: 'staff', label: 'Staff', color: '#ebdcb9' },
   ],
   months: [
     { month: 'Feb', fodder: 3.4, shelter: 1.1, medical: 0.8, staff: 1.2 },
@@ -79,7 +79,7 @@ export const ABOUT = {
   lineage:
     'Shri Khodadhor Panjrapole rises from the soil of Kuvala — the birthplace connection of Pu. Acharya Bhagwant Shri Surendrasurishwarji M.S. — and grows under the divine blessing of P. Pu. Acharya Bhagwant Shri Ramsurishwarji M.S. (Dehlawala).',
   land:
-    'On roughly nine acres in Bhabhar taluka, the sanctuary shelters over a thousand animals once destined for slaughter. What began as a refuge for a few is today a working panjrapole — hospital, sheds, fodder stores, water and staff — run by the Shri Phuvala Shvetambar Murtipujak Jain Sangh.',
+    'On roughly nine acres in Bhabhar taluka, the sanctuary shelters over a thousand animals once destined for slaughter. What began as a refuge for a few is today a working panjrapole — hospital, sheds, fodder stores, water and staff — run by the Shri Kuvala Shvetambar Murtipujak Jain Sangh.',
 }
 
 export const GALLERY = [
