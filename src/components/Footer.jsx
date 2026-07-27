@@ -1,11 +1,10 @@
 import { useContent } from '../i18n.jsx'
 import { ORG, TRUST } from '../data/site.js'
 
-const MAP_QUERY = 'Shri Radhanpur Khodadhor Panjrapole Sanstha'
+const MAP_QUERY = 'Shree Khodadhor Panjarapol Kuvala'
 const MAP_EMBED =
-  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467554.0037228136!2d71.14152272128779!3d23.720061298339832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395b9f032b4a5ccd%3A0x13c1b19589c93bef!2sShri%20Radhanpur%20Khodadhor%20Panjrapole%20Sanstha!5e0!3m2!1sen!2sin!4v1784903735395!5m2!1sen!2sin'
-const MAP_LINK = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(MAP_QUERY)}`
-
+  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1816.1748439418604!2d71.6647701438941!3d24.122705536873823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395b6b91211ab607%3A0x4d696d67d9c1862f!2sShree%20Khodadhor%20Panjarapol%20Kuvala!5e1!3m2!1sen!2sin!4v1785145712817!5m2!1sen!2sin'
+const MAP_LINK = 'https://maps.app.goo.gl/AWLP3okLbBGpa3BBA'
 export default function Footer() {
   const { c } = useContent()
   return (
@@ -32,7 +31,7 @@ export default function Footer() {
         {/* Town location */}
         <div className="overflow-hidden border border-white/15">
           <iframe
-            title="Shri Radhanpur Khodadhor Panjrapole Sanstha on Google Maps"
+            title="Shri Khodadhor Panjrapole - Kuvala on Google Maps"
             src={MAP_EMBED}
             className="h-56 w-full border-0"
             allowFullScreen
@@ -49,3 +48,4 @@ export default function Footer() {
     </footer>
   )
 }
+ 

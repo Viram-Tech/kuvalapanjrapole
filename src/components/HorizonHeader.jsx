@@ -4,6 +4,7 @@ import { LANGS, useContent } from '../i18n.jsx'
 
 const MENU = [
   { key: 'home', href: '#top' },
+  { key: 'facilities', href: '#facilities' },
   { key: 'sponsor', href: '#sponsor' },
   { key: 'seva', href: '#seva' },
   { key: 'about', href: '#about' },

@@ -13,6 +13,7 @@ export default {
     seva: 'Seva Report',
     about: 'About',
     contact: 'Contact',
+    facilities: 'Facilities',
     donate: 'Donate',
     menu: 'Menu',
     explore: 'Explore',
@@ -47,6 +48,7 @@ export default {
 
   sponsor: {
     title: 'Give a name to shelter.',
+    quote: 'Your offering of wealth will serve the voiceless souls.',
     intro: 'Three permanent structures anchor the sanctuary. Endow one at ₹5,00,000 — your family or guru’s name carried on it in perpetuity.',
     eyebrow: 'Naming opportunity',
     cta: 'Sponsor',
@@ -102,5 +104,29 @@ export default {
     directions: 'Directions',
     call: 'Call',
     sponsorCta: 'Sponsor a Structure',
+  },
+
+  facilities: {
+    title: 'Our Sanctuary Facilities & Services',
+    quote: 'Serving animals and birds... A humble request to listen to the silent longing of their hearts, to stand by the mute, voiceless creatures and comfort their souls.',
+    office: 'Office Room',
+    hospital: 'Animal Hospital',
+    staff: 'Staff Room',
+    weigh: 'Weigh Bridge & Loading Area',
+    home: 'Animal House',
+    chabutra: 'Chabutro (Bird Tower)',
+    godown: 'Fodder Godown',
+    shed: 'Cattle Sheds',
+    wado: 'Goat & Sheep Shed',
+    troughs: 'Water Troughs',
+    bore: 'Water Borewell',
+  },
+
+  appeal: {
+    title: 'They Need Your Help',
+    body1: 'Since our panjrapole is near the border, we rescue sheep, goats, buffalo calves, cows, oxen, nilgai, birds and disabled, blind, helpless animals and birds destined for slaughter, and shelter them in this panjrapole. The flow of these voiceless animals is constantly increasing. Currently, we are maintaining about 1000 animals.',
+    body2: 'To meet these expenses, there is a constant need for assistance from generous people like you, trustees, and members.',
+    joinTitle: 'Join Hands With Us',
+    joinBody: 'We humbly request you to make a financial contribution to this organization and become a partner in maintaining helpless animals. We also humbly request Acharya Bhagwants, Sadhus, and Shramani Vrunds that with your holy inspiration, you speed up this life-saving work of ours.',
   },
 }

@@ -103,11 +103,29 @@ export const TRUST = {
     ifsc: 'SBIN0002632',
   },
   representatives: [
-    { name: 'Himatlal Hiralal Loladiya', phone: '9426948959' },
+    { name: 'Himatlal Hiralal Loladiya', phone: '9426948959 / 9820469936' },
     { name: 'Sagar Shah', phone: '7977751403' },
     { name: 'Shashikantbhai B. Roliya', phone: '9820374771' },
     { name: 'Maheshbhai Fozalal Seth', phone: '9323136343' },
     { name: 'Rameshbhai Bhogilal Seth', phone: '9820654202' },
     { name: 'Indravdan Ishwarlal Loladiya', phone: '9821383803' },
+    { name: 'Bhaveshbhai H. Loladiya', phone: '9819501316' },
+    { name: 'Dineshbhai Mafatlal Loladiya', phone: '9460626289' },
+    { name: 'Kalpeshbhai Ishwarlal Loladiya', phone: '9819575006' },
+    { name: 'Sureshbhai Kirtilal Ratadiya', phone: '9819189543' },
   ],
 }
+
+export const FACILITIES = [
+  { id: 'office', image: '/images/officeroom.jpg' },
+  { id: 'hospital', image: '/images/hospital.jpg' },
+  { id: 'staff', image: '/images/staffroom.jpg' },
+  { id: 'weigh', image: '/images/chabutra.jpg' },
+  { id: 'home', image: '/images/home.jpg' },
+  { id: 'chabutra', image: '/images/chabutra.jpg' },
+  { id: 'godown', image: '/images/straw.jpg' },
+  { id: 'shed', image: '/images/shade.jpg' },
+  { id: 'wado', image: '/images/bakrishade.jpg' },
+  { id: 'troughs', image: '/images/watertank.jpg' },
+  { id: 'bore', image: '/images/waterbore.jpg' },
+]
