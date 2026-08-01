@@ -16,6 +16,7 @@ export default {
     contact: 'સંપર્ક',
     facilities: 'સુવિધાઓ',
     donate: 'દાન કરો',
+    report: 'પત્રિકા',
     menu: 'મેનૂ',
     explore: 'શોધો',
     language: 'ભાષા',

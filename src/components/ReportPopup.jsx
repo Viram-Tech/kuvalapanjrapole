@@ -67,6 +67,13 @@ export default function ReportPopup() {
     }
   }, [])
 
+  // Allow opening on demand (e.g. from the menu), bypassing scroll/dwell/session.
+  useEffect(() => {
+    const openNow = () => setOpen(true)
+    window.addEventListener('open-report', openNow)
+    return () => window.removeEventListener('open-report', openNow)
+  }, [])
+
   // Lock body scroll and wire Escape while the modal is open.
   useEffect(() => {
     if (!open) return

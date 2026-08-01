@@ -14,6 +14,7 @@ export default {
     contact: 'संपर्क',
     facilities: 'सुविधाएं',
     donate: 'दान करें',
+    report: 'पत्रिका',
     menu: 'मेन्यू',
     explore: 'देखें',
     language: 'भाषा',

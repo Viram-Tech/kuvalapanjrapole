@@ -15,6 +15,7 @@ export default {
     contact: 'Contact',
     facilities: 'Facilities',
     donate: 'Donate',
+    report: 'Brochure',
     menu: 'Menu',
     explore: 'Explore',
     language: 'Language',

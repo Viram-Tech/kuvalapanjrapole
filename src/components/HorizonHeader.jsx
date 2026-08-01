@@ -133,8 +133,18 @@ export default function HorizonHeader() {
                 </ul>
               </nav>
 
-              {/* footer CTA */}
-              <div className="border-t border-line p-4">
+              {/* footer CTAs */}
+              <div className="space-y-2 border-t border-line p-4">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setOpen(false)
+                    window.dispatchEvent(new Event('open-report'))
+                  }}
+                  className="block w-full rounded-md border border-line px-5 py-3 text-center font-semibold text-ink transition-colors hover:bg-paper-2"
+                >
+                  {c.nav.report}
+                </button>
                 <a
                   href="#sponsor"
                   onClick={() => setOpen(false)}
