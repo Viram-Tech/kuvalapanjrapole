@@ -1,6 +1,7 @@
 import HorizonHeader from '../components/HorizonHeader.jsx'
 import BrandMark from '../components/BrandMark.jsx'
 import OnTop from '../components/OnTop.jsx'
+import ReportPopup from '../components/ReportPopup.jsx'
 import Footer from '../components/Footer.jsx'
 import Hero from '../sections/Hero.jsx'
 import Overview from '../sections/Overview.jsx'
@@ -43,6 +44,7 @@ export default function Home() {
       </main>
       <Footer />
       <OnTop />
+      <ReportPopup />
     </>
   )
 }

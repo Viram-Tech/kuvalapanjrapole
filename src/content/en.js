@@ -89,6 +89,7 @@ export default {
     bankNote: 'A dedicated giving flow is being finalised. For now, donations by bank transfer:',
     acName: 'A/c name',
     bank: 'Bank',
+    branch: 'Branch',
     acNo: 'A/c no.',
     ifsc: 'IFSC',
     reps: 'Trustees & representatives',
@@ -128,5 +129,14 @@ export default {
     body2: 'To meet these expenses, there is a constant need for assistance from generous people like you, trustees, and members.',
     joinTitle: 'Join Hands With Us',
     joinBody: 'We humbly request you to make a financial contribution to this organization and become a partner in maintaining helpless animals. We also humbly request Acharya Bhagwants, Sadhus, and Shramani Vrunds that with your holy inspiration, you speed up this life-saving work of ours.',
+  },
+
+  popup: {
+    eyebrow: '2024 · Annual Report',
+    title: 'The 2024 Seva Report is here.',
+    body: 'A year of shelter, fodder and care — see how your support kept over a thousand animals fed, treated and safe.',
+    open: 'Read the full report',
+    dismiss: 'Maybe later',
+    close: 'Close',
   },
 }

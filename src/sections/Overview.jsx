@@ -1,5 +1,6 @@
 import { useContent } from '../i18n.jsx'
 import { STATS } from '../data/site.js'
+import Masthead from '../components/Masthead.jsx'
 
 export default function Overview() {
   const { c } = useContent()
@@ -7,10 +8,8 @@ export default function Overview() {
   return (
     <section id="overview" className="py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        {/* Mission intro */}
-        <p className="font-display text-3xl leading-[1.12] tracking-tight text-ink sm:text-4xl md:text-5xl">
-          {c.hero.mission}
-        </p>
+        {/* Masthead — traditional Gujarati poster header */}
+        <Masthead />
       </div>
 
       {/* Stats — full-bleed coral band (site colour) */}

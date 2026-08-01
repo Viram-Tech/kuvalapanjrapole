@@ -48,6 +48,7 @@ export default function Contact() {
               <dl className="mt-4 space-y-1 text-sm text-white">
                 <div className="flex justify-between gap-4"><dt className="text-white/50">{cc.acName}</dt><dd className="text-right">{TRUST.bank.name}</dd></div>
                 <div className="flex justify-between gap-4"><dt className="text-white/50">{cc.bank}</dt><dd>{TRUST.bank.bank}</dd></div>
+                <div className="flex justify-between gap-4"><dt className="text-white/50">{cc.branch}</dt><dd>{TRUST.bank.branch}</dd></div>
                 <div className="flex justify-between gap-4"><dt className="text-white/50">{cc.acNo}</dt><dd className="tabular-nums">{TRUST.bank.account}</dd></div>
                 <div className="flex justify-between gap-4"><dt className="text-white/50">{cc.ifsc}</dt><dd className="tabular-nums">{TRUST.bank.ifsc}</dd></div>
               </dl>

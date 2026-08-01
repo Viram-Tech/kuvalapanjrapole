@@ -99,6 +99,7 @@ export const TRUST = {
   bank: {
     name: 'SHRI KHODADHOR PANJRAPOLE KUVALA',
     bank: 'State Bank of India',
+    branch: 'Bhabhar Branch',
     account: '10895011054',
     ifsc: 'SBIN0002632',
   },
