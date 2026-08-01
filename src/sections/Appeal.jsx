@@ -7,8 +7,8 @@ export default function Appeal() {
 
   return (
     <section id="appeal" className="bg-paper px-4 py-24 sm:px-6 md:py-32">
-      <div className="mx-auto max-w-5xl">
-        <div className="grid items-start gap-10 lg:grid-cols-[1.4fr_1fr] lg:gap-14">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid items-start gap-8 lg:grid-cols-[1.4fr_1fr] lg:items-stretch lg:gap-8">
           {/* Letter */}
           <div className="font-guj rounded-3xl border border-line bg-paper-2 p-8 shadow-sm md:p-10">
             <p className="text-lg font-semibold text-ink">
@@ -43,8 +43,10 @@ export default function Appeal() {
             </div>
           </div>
 
-          {/* Images */}
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+          {/* Images — on large screens they sit at the top and bottom of the
+              letter's height, with a decorative divider filling the space between,
+              so the second image ends near the Donate button. */}
+          <div className="flex flex-col gap-6 sm:grid sm:grid-cols-2 lg:flex lg:h-full lg:flex-col lg:gap-0">
             <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-line">
               <img
                 src="/images/joining1.webp"
@@ -52,6 +54,16 @@ export default function Appeal() {
                 className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
+
+            {/* Divider — only in the tall gap on large screens */}
+            <div className="hidden flex-1 flex-col items-center justify-center py-4 lg:flex" aria-hidden>
+              <span className="w-px flex-1 bg-line" />
+              <svg viewBox="0 0 24 24" className="my-3 h-4 w-4 text-maroon" fill="currentColor">
+                <path d="M12 2l1.6 6.4L20 10l-6.4 1.6L12 18l-1.6-6.4L4 10l6.4-1.6z" />
+              </svg>
+              <span className="w-px flex-1 bg-line" />
+            </div>
+
             <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-line">
               <img
                 src="/images/xjoining2.jpg"
