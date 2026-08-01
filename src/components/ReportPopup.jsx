@@ -114,18 +114,18 @@ export default function ReportPopup() {
         </div>
       </div>
 
-      {/* Full-page report image (scrollable, links to the PDF) */}
-      <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 pb-6 sm:px-6">
+      {/* Full report image — scaled to fit the viewport, no scrolling. Links to the PDF. */}
+      <div className="flex min-h-0 flex-1 items-center justify-center overflow-hidden px-4 pb-4 sm:px-6">
         <a
           href={PDF}
           target="_blank"
           rel="noopener noreferrer"
-          className="mx-auto block w-full max-w-2xl animate-[popIn_0.35s_cubic-bezier(0.16,1,0.3,1)]"
+          className="flex h-full max-h-full items-center justify-center animate-[popIn_0.35s_cubic-bezier(0.16,1,0.3,1)]"
         >
           <img
             src={IMAGE}
             alt={t.title}
-            className="w-full rounded-xl border border-line bg-paper shadow-2xl"
+            className="max-h-full w-auto max-w-full rounded-xl border border-line bg-paper object-contain shadow-2xl"
           />
         </a>
       </div>
