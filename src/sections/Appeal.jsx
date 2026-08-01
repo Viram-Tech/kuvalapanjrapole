@@ -1,36 +1,30 @@
 import { useContent } from '../i18n.jsx'
 
-// Appeal — the sanctuary's authentic Gujarati letter to donors, set as a
-// letter-style block. Content is fixed Gujarati (kept site-wide, like the masthead).
+// Appeal — the sanctuary's donor letter, translated per language (institution
+// and guru names are kept in Gujarati script within every language).
 export default function Appeal() {
   const { c } = useContent()
+  const ap = c.appeal
 
   return (
     <section id="appeal" className="bg-paper px-4 py-24 sm:px-6 md:py-32">
       <div className="mx-auto max-w-7xl">
         <div className="grid items-start gap-8 lg:grid-cols-[1.4fr_1fr] lg:items-stretch lg:gap-8">
           {/* Letter */}
-          <div className="font-guj rounded-3xl border border-line bg-paper-2 p-8 shadow-sm md:p-10">
-            <p className="text-xl font-semibold text-ink sm:text-2xl">
-              ધર્મપ્રેમી, શ્રી .................................... જૈન સંઘ / ટ્રસ્ટીવર્યશ્રીઓ
-            </p>
-            <p className="mt-4 text-lg text-maroon sm:text-xl">
-              શ્રી કુવાળા જૈન સંઘ સંચાલિત શ્રી ખોડાઢોર પાંજરાપોળ, કુવાળાના જય જિનેન્દ્ર સ્વીકારશોજી.
-            </p>
+          <div className="rounded-3xl border border-line bg-paper-2 p-8 shadow-sm md:p-10">
+            <p className="text-xl font-semibold text-ink sm:text-2xl">{ap.salutation}</p>
+            <p className="mt-4 text-lg text-maroon sm:text-xl">{ap.greeting}</p>
 
             <div className="mt-6 space-y-5 text-lg leading-relaxed text-ink-2 sm:text-xl">
-              <p>
-                સવિનય સાથે જણાવવાનું કે ઉત્તર ગુજરાતના બનાસકાંઠા જિલ્લાના ભાભર તાલુકામાં આવેલું કુવાળા ગામ, જે અપ્રતિમ પ્રતિભાશાળી પૂ.આ.ભ.શ્રી સુરેન્દ્રસૂરીશ્વરજી મ.સા.ની જન્મભૂમિ અને પ.પૂ.તપાગચ્છાધિપતિ આ.ભ.શ્રી રામસૂરીશ્વરજી મ.સા. (ડહેલાવાળા)ની મંગલ આશીર્વાદથી પાવન થયેલ છે.
-              </p>
-              <p>
-                અમારી આ પાંજરાપોળ પૂ.આ.ભ.શ્રી સુરેન્દ્રસૂરીશ્વરજી મ.સા.ની પ્રેરણાથી શરૂ કરવામાં આવેલી, જે અત્યારે ૯ વીઘા જેટલી વિશાળ ભૂમિ પર પ.પૂ.આ.ભ.શ્રી સુરેન્દ્રસૂરીશ્વરજી મ.સા. (ડહેલાવાળા)ના દિવ્ય આશીર્વાદથી સંપાદિત ક્ષેત્ર છે. આ પાંજરાપોળમાં ૪૮ શેડ, પાણી પીવાના હવાડા, નીરાણીના ગમાણ, ઘાસનું ગોડાઉન, માંદા ઢોર માટેનો અલગ શેડ, બકરાના શેડ, પાણીની ટાંકી, પાણીના બોર, ટ્રેકટર, પાંચવ તેમજ દવાખાનું, ઓફિસ રૂમ, સ્ટાફ રૂમ, ધાસના વજનનો કાંટો આટલું જ નહિ પરંતુ પારેવાઓ માટેનો ચબુતરો, પક્ષીઘર અને સંપૂર્ણ પાંજરાપોળમાં સી.સી.ટીવી કેમેરા ગોઠવવામાં આવેલ છે.
-              </p>
-              <p>
-                અમારી આ પાંજરાપોળ ઓર્ડર નજુક હોવાથી અમે ઢોર-બકરા-પાડા-ગાય-ભેંસ-રોજ પશુ લુલા-લંગડા-આંધળા નિરાધાર પશુ-પક્ષીઓને કતલખાને જતા બચાવીને આ પાંજરાપોળમાં સમાઈ લેવાય છે. પ્રવાહ નિરંતર વધી રહ્યો છે.
-              </p>
-              <p className="border-l-2 border-maroon pl-4 text-lg font-semibold text-ink/90 sm:text-xl">
-                હાલમાં લગભગ ૧૨૦૦ જેટલા પશુઓ નિભાવાય છે. જે વર્ષે પહોંચી વળવા આપના જેવા ઉદારદિલના મહાનુભાવો-ટ્રસ્ટી વર્ગ-સભ્યોના સહાયતાથી અમારા ભગીરથ કાર્યમાં આપની પ્રેરણાથી અમારો આ જીવદયારૂપી કાર્ય વેગવંતુ બનાવશો.
-              </p>
+              {ap.paras.map((p, i) =>
+                i === ap.paras.length - 1 ? (
+                  <p key={p} className="border-l-2 border-maroon pl-4 font-semibold text-ink/90">
+                    {p}
+                  </p>
+                ) : (
+                  <p key={p}>{p}</p>
+                ),
+              )}
             </div>
 
             <div className="mt-8">

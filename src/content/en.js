@@ -54,6 +54,28 @@ export default {
     cta: 'Sponsor',
     funded: 'Funded',
     available: 'Available',
+    heading: 'Your offering of wealth will serve the voiceless souls.',
+    tiers: [
+      'Godown compound',
+      'Tabut (last-rites) shelter',
+      'Borewell water tank in the field',
+      'Fodder godown',
+      'Cattle-yard gate',
+      'Room in the field house',
+      'Name on a fodder manger',
+      'Name on a water trough',
+      'Capsule scheme',
+      'Wall plaque',
+      'Permanent tithi (memorial day)',
+      'One tractor of grass',
+      'Grain for birds',
+      'Rotla (bread) for dogs',
+    ],
+    invite: [
+      'We warmly invite you to visit the sanctuary, remember the voiceless animals, and become a partner in this work of compassion. Please send your contribution by demand draft in the name of “શ્રી કુવાળા ખોડાઢોર પાંજરાપોળ”.',
+      'For more information, please contact the numbers listed below.',
+    ],
+    tax80g: 'Donations to the sanctuary are tax-exempt under Section 80G.',
     structures: {
       godown: { name: 'Fodder Godown', blurb: 'Sponsor the warehouse that stores the sanctuary’s year-round supply of hay and fodder — the difference between a full and an empty trough through the dry months.' },
       gate: { name: 'Main Gate', blurb: 'Name the entrance through which every rescued animal first arrives — the threshold between the road to slaughter and a life of shelter.' },
@@ -129,6 +151,14 @@ export default {
     body2: 'To meet these expenses, there is a constant need for assistance from generous people like you, trustees, and members.',
     joinTitle: 'Join Hands With Us',
     joinBody: 'We humbly request you to make a financial contribution to this organization and become a partner in maintaining helpless animals. We also humbly request Acharya Bhagwants, Sadhus, and Shramani Vrunds that with your holy inspiration, you speed up this life-saving work of ours.',
+    salutation: 'Respected dharma-loving Shri .................................... — Jain Sangh / Esteemed Trustees,',
+    greeting: 'Jai Jinendra from શ્રી ખોડાઢોર પાંજરાપોળ, Kuvala — run by શ્રી કુવાળા જૈન સંઘ.',
+    paras: [
+      'We respectfully wish to inform you that Kuvala village — in Bhabhar taluka of Banaskantha district, North Gujarat — is the birthplace of the incomparably gifted પૂ.આ.ભ.શ્રી સુરેન્દ્રસૂરીશ્વરજી મ.સા., and has been sanctified by the auspicious blessings of the Tapagachhadhipati આ.ભ.શ્રી રામસૂરીશ્વરજી મ.સા. (ડહેલાવાળા).',
+      'Our panjrapole was started with the inspiration of પૂ.આ.ભ.શ્રી સુરેન્દ્રસૂરીશ્વરજી મ.સા., and today spans roughly 9 vigha of land, developed under the divine blessings of પ.પૂ.આ.ભ.શ્રી સુરેન્દ્રસૂરીશ્વરજી મ.સા. (ડહેલાવાળા). It has 48 sheds, drinking-water troughs, feeding mangers, a fodder godown, a separate shed for sick cattle, goat sheds, water tanks, borewells, a tractor and a weighbridge, along with a hospital, office room, staff room and a fodder weighing scale — and, beyond all that, a chabutro (dovecote) for pigeons, a bird house, and CCTV cameras installed throughout the entire panjrapole.',
+      'As our panjrapole is near the border, we rescue cattle, goats, buffalo calves, cows, buffaloes, nilgai, and lame, crippled and blind helpless animals and birds from being taken to slaughter, and give them shelter here. This flow is continuously increasing.',
+      'At present nearly 1,200 animals are being cared for. To meet the expenses, we constantly need the support of generous-hearted people, trustees and members like you — and pray that, with your inspiration, this compassionate work of ours is carried forward with ever greater momentum.',
+    ],
   },
 
   popup: {

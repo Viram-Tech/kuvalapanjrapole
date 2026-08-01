@@ -52,23 +52,25 @@ export const STRUCTURES = [
   },
 ]
 
-// Donation tiers from the sanctuary's poster — Gujarati labels + amounts,
-// sorted by amount (high → low). Non-translatable (kept in Gujarati site-wide).
+// Donation-tier amounts from the sanctuary's poster (single source of truth,
+// high → low). Labels live per-language in each content tree's `sponsor.tiers`,
+// in this same order. Amounts render as ₹ + these digits (converted to Gujarati
+// numerals on the /gu page in the Sponsor section).
 export const DONATION_TIERS = [
-  { amount: '₹૧૧,૫૧,૦૦૦', label: 'ગોડાઉનનું કંપાઉન્ડ' },
-  { amount: '₹૬,૦૦,૦૦૦', label: 'શેડનું તાબુત' },
-  { amount: '₹૬,૦૦,૦૦૦', label: 'વાડીમાં બોરની પાણીની ટાંકી' },
-  { amount: '₹૫,૦૦,૦૦૦', label: 'ખાણનું ગોડાઉન' },
-  { amount: '₹૫,૦૦,૦૦૦', label: 'પશુ વાડાનો ગેટ' },
-  { amount: '₹૩,૦૦,૦૦૦', label: 'વાડીમાં ઓરડાની રૂમ' },
-  { amount: '₹૧,૫૦,૦૦૦', label: 'ઘાસ ગમાણ પર નામ' },
-  { amount: '₹૧,૫૦,૦૦૦', label: 'પાણીના હવાડા પર નામ' },
-  { amount: '₹૧,૦૮,૦૦૦', label: 'કેપ્સુલ યોજના' },
-  { amount: '₹૫૪,૦૦૦', label: 'દિવાલપર તકતી' },
-  { amount: '₹૨૧,૦૦૦', label: 'કાયમી તીથી' },
-  { amount: '₹૧૫,૦૦૦', label: '૧ ટ્રેકટર ઘાસ' },
-  { amount: '₹૧૧,૦૦૦', label: 'પક્ષી ને ચણ' },
-  { amount: '₹૧૧,૦૦૦', label: 'કુતરાને રોટલા' },
+  '11,51,000',
+  '6,00,000',
+  '6,00,000',
+  '5,00,000',
+  '5,00,000',
+  '3,00,000',
+  '1,50,000',
+  '1,50,000',
+  '1,08,000',
+  '54,000',
+  '21,000',
+  '15,000',
+  '11,000',
+  '11,000',
 ]
 
 // Seva Report — monthly spend by category, in ₹ lakh. Aggregate, no names.

@@ -3,7 +3,13 @@ import { STATS } from '../data/site.js'
 import Masthead from '../components/Masthead.jsx'
 
 export default function Overview() {
-  const { c } = useContent()
+  const { c, lang } = useContent()
+  // English reads as a spaced-out eyebrow label; Gujarati/Hindi need a larger,
+  // un-tracked, bolder label so the script stays legible.
+  const statLabel =
+    lang === 'en'
+      ? 'mt-2 text-xs uppercase tracking-[0.16em] text-white/85'
+      : 'mt-2 text-sm font-semibold text-white sm:text-base'
 
   return (
     <section id="overview" className="py-24 md:py-32">
@@ -18,7 +24,7 @@ export default function Overview() {
           {STATS.map((s, i) => (
             <div key={s.label}>
               <dt className="font-display text-4xl font-semibold sm:text-5xl">{s.value}</dt>
-              <dd className="mt-2 text-xs uppercase tracking-[0.16em] text-white/85">{c.statLabels[i]}</dd>
+              <dd className={statLabel}>{c.statLabels[i]}</dd>
             </div>
           ))}
         </dl>
